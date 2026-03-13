@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gundamcom.mx/sitemap-index.xml

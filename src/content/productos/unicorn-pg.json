@@ -1,0 +1,13 @@
+{
+  "title": "RX-0 Unicorn Gundam",
+  "grade": "PG",
+  "series": "Gundam Unicorn",
+  "scale": "1/60",
+  "price": 8500,
+  "salePrice": 7999,
+  "stock": 3,
+  "description": "El Unicorn Gundam en Perfect Grade 1/60 con sistema LED incluido. Transformación NT-D completa. La joya de cualquier colección.",
+  "image": "/images/productos/unicorn-pg.webp",
+  "tags": ["gundam", "pg", "unicorn", "premium", "led"],
+  "featured": true
+}

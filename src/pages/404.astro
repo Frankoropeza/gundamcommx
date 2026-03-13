@@ -1,0 +1,19 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Página no encontrada" description="La página que buscas no existe.">
+  <div class="max-w-2xl mx-auto px-4 py-24 text-center">
+    <p class="text-7xl font-extrabold text-primary mb-4">404</p>
+    <h1 class="text-2xl font-bold text-secondary mb-3">Página no encontrada</h1>
+    <p class="text-gray-500 mb-8">
+      Parece que este kit se agotó... o la página no existe.
+    </p>
+    <a
+      href="/"
+      class="inline-flex items-center gap-2 bg-primary text-white font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-colors text-sm"
+    >
+      Volver al inicio
+    </a>
+  </div>
+</BaseLayout>

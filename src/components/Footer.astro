@@ -1,0 +1,47 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="bg-secondary text-gray-300">
+  <div class="max-w-7xl mx-auto px-4 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Brand -->
+      <div>
+        <div class="flex items-center gap-2 mb-4">
+          <div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+            <span class="text-white font-extrabold">G</span>
+          </div>
+          <span class="font-bold text-white">
+            Gundam<span class="text-primary">Com</span>MX
+          </span>
+        </div>
+        <p class="text-sm text-gray-400 leading-relaxed">
+          Tu tienda de Gunpla en México. Kits originales Bandai con envío a todo el país.
+        </p>
+      </div>
+
+      <!-- Links -->
+      <div>
+        <h3 class="font-semibold text-white mb-3 text-sm uppercase tracking-wider">Tienda</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="/#categorias" class="hover:text-primary transition-colors">Catálogo</a></li>
+          <li><a href="/blog" class="hover:text-primary transition-colors">Blog</a></li>
+          <li><a href="#" class="hover:text-primary transition-colors">Preguntas frecuentes</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <h3 class="font-semibold text-white mb-3 text-sm uppercase tracking-wider">Contacto</h3>
+        <ul class="space-y-2 text-sm">
+          <li>contacto@gundamcom.mx</li>
+          <li>Envíos a toda la República Mexicana</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="border-t border-gray-700 mt-10 pt-6 text-center text-sm text-gray-500">
+      <p>&copy; {year} Gundam Com MX. Todos los derechos reservados.</p>
+    </div>
+  </div>
+</footer>

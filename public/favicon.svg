@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <rect width="64" height="64" rx="12" fill="#7C3AED"/>
+  <path d="M32 8L12 20v24l20 12 20-12V20L32 8z" fill="#1F1F1F" opacity="0.3"/>
+  <path d="M32 12L16 22v20l16 10 16-10V22L32 12z" stroke="white" stroke-width="2" fill="none"/>
+  <text x="32" y="40" text-anchor="middle" fill="white" font-family="Arial Black" font-size="16" font-weight="bold">G</text>
+</svg>

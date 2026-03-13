@@ -1,0 +1,95 @@
+---
+const navLinks = [
+  { label: 'Inicio', href: '/' },
+  { label: 'Catálogo', href: '/#categorias' },
+  { label: 'Blog', href: '/blog' },
+];
+---
+
+<header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
+  <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+    <!-- Logo -->
+    <a href="/" class="flex items-center gap-2 group">
+      <div class="w-9 h-9 bg-primary rounded-lg flex items-center justify-center">
+        <span class="text-white font-extrabold text-lg">G</span>
+      </div>
+      <span class="font-bold text-lg text-secondary group-hover:text-primary transition-colors">
+        Gundam<span class="text-primary">Com</span>MX
+      </span>
+    </a>
+
+    <!-- Nav -->
+    <nav class="hidden md:flex items-center gap-8">
+      {navLinks.map((link) => (
+        <a
+          href={link.href}
+          class="text-sm font-medium text-gray-600 hover:text-primary transition-colors"
+        >
+          {link.label}
+        </a>
+      ))}
+    </nav>
+
+    <!-- Actions -->
+    <div class="flex items-center gap-3">
+      <!-- Search -->
+      <button
+        type="button"
+        aria-label="Buscar productos"
+        class="p-2 text-gray-500 hover:text-primary transition-colors"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+        </svg>
+      </button>
+
+      <!-- Cart -->
+      <a
+        href="#"
+        aria-label="Carrito de compras"
+        class="relative p-2 text-gray-500 hover:text-primary transition-colors"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 100 4 2 2 0 000-4z" />
+        </svg>
+        <span class="absolute -top-0.5 -right-0.5 w-4 h-4 bg-primary text-white text-[10px] font-bold rounded-full flex items-center justify-center">
+          0
+        </span>
+      </a>
+
+      <!-- Mobile menu button -->
+      <button
+        type="button"
+        aria-label="Menú"
+        class="md:hidden p-2 text-gray-500 hover:text-primary transition-colors"
+        id="mobile-menu-btn"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile nav -->
+  <nav id="mobile-menu" class="md:hidden hidden border-t border-gray-100 bg-white">
+    <div class="px-4 py-3 space-y-2">
+      {navLinks.map((link) => (
+        <a
+          href={link.href}
+          class="block py-2 text-sm font-medium text-gray-600 hover:text-primary transition-colors"
+        >
+          {link.label}
+        </a>
+      ))}
+    </div>
+  </nav>
+</header>
+
+<script>
+  const btn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  btn?.addEventListener('click', () => {
+    menu?.classList.toggle('hidden');
+  });
+</script>

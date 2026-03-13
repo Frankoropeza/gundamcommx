@@ -1,0 +1,53 @@
+---
+import SEO from '@/components/SEO.astro';
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  image?: string;
+  type?: 'website' | 'article' | 'product';
+}
+
+const { title, description, image, type } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es-MX">
+  <head>
+    <SEO title={title} description={description} image={image} type={type} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Schema.org Store -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Store",
+      "name": "Gundam Com MX",
+      "description": "Tienda online de kits Gunpla originales en México. Envíos a todo el país.",
+      "url": "https://gundamcom.mx",
+      "logo": "https://gundamcom.mx/favicon.svg",
+      "currenciesAccepted": "MXN",
+      "paymentAccepted": "Tarjeta de crédito, Tarjeta de débito, Transferencia bancaria",
+      "areaServed": {
+        "@type": "Country",
+        "name": "México"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "MX"
+      }
+    })} />
+  </head>
+  <body class="min-h-screen flex flex-col bg-background text-secondary font-sans antialiased">
+    <Header />
+    <main class="flex-1">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

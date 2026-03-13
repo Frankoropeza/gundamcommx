@@ -1,0 +1,12 @@
+{
+  "title": "RX-78-2 Gundam",
+  "grade": "HG",
+  "series": "Mobile Suit Gundam",
+  "scale": "1/144",
+  "price": 450,
+  "stock": 15,
+  "description": "El icónico RX-78-2 Gundam en escala 1/144. Kit de grado High Grade con gran detalle y articulación. Ideal para principiantes y coleccionistas.",
+  "image": "/images/productos/rx-78-2-hg.webp",
+  "tags": ["gundam", "hg", "clasico", "principiante"],
+  "featured": true
+}
